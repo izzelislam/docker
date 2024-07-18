@@ -1,0 +1,2 @@
+# membuat container volume
+docker container create --name mongovolume --publish 2020:27017 --mount "type=volume,source=mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=dev --env MONGO_INITDB_ROOT_PASSWORD=dev  mongo:latest
